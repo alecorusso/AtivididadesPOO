@@ -10,7 +10,7 @@ class Postagem {
 
         void assistir ();
         void imprimir ();
-}
+};
 
 class Perfil {
     public:
@@ -21,36 +21,36 @@ class Perfil {
 
         int getTotalDeVisualizacoes();
         bool postar(Postagem* p);
-}
+};
 
 void Postagem::assistir(){
     visualizacoes++;
 }
 
 void Postagem::imprimir(){
-    cout << "Postagem: " << legenda << " - " << visualizacoes << "visualizacoes" << endl;
+    cout << "Postagem: " << legenda << " - " << visualizacoes << " visualizacoes" << endl;
 }
 
 int Perfil::getTotalDeVisualizacoes(){
     int p1Visus = 0, p2Visus = 0;
 
     if(p1 != NULL){
-        p1Visus = *p1->visualizacoes;
+        p1Visus = p1->visualizacoes;
     } 
     if (p2 != NULL){
-        p2Visus = *p2->visualizacoes;
+        p2Visus = p2->visualizacoes;
     }
 
     return p1Visus + p2Visus;
 }
 
 bool Perfil::postar(Postagem* p){
-    if(quantidade == 0 && *p != p1){
-        p1 = *p;
+    if(quantidade == 0 && p != p1){
+        p1 = p;
         quantidade++;
         return true;
-    } else if(quantidade == 1 && *p != p2){
-        p2 = *p;
+    } else if(quantidade == 1 && p != p2){
+        p2 = p;
         quantidade++;
         return true;
     }

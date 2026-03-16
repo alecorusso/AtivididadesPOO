@@ -79,6 +79,6 @@ void teste(){
     cifraClub->postar(postRaul);
     cifraClub->postar(postFaroeste);
     postFaroeste->imprimir();
-    cifraClub->getTotalDeVisualizacoes();
+    cout << cifraClub->getTotalDeVisualizacoes() << endl;
 
 }

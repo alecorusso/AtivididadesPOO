@@ -45,11 +45,11 @@ int Perfil::getTotalDeVisualizacoes(){
 }
 
 bool Perfil::postar(Postagem* p){
-    if(quantidade == 0 && p != p1){
+    if(quantidade == 0){
         p1 = p;
         quantidade++;
         return true;
-    } else if(quantidade == 1 && p != p2){
+    } else if(quantidade == 1 && p != p1){
         p2 = p;
         quantidade++;
         return true;

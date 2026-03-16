@@ -10,7 +10,7 @@ class Postagem {
 
         void assistir ();
         void imprimir ();
-}
+};
 
 void Postagem::assistir(){
     visualizacoes++;

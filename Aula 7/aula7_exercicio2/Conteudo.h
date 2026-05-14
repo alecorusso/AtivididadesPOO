@@ -4,12 +4,10 @@
 #include "Postagem.h"
 
 class Conteudo : public Postagem {
-    public:
+    public :
         Conteudo(string legenda);
         virtual ~Conteudo();
-
 };
 
-using namespace std;
 
 #endif

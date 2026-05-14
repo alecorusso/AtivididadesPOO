@@ -3,29 +3,23 @@
 
 #include "Postagem.h"
 #include "Conteudo.h"
-#include <string>
-
-using namespace std;
+#include "Lista.h"
 
 class Lista : public Postagem {
-    private:
-    int tamanho;
-    Conteudo **conteudos;
-    int quantidade = 0;
+    private :
+        Conteudo** conteudos;
+        int quantidade = 0;
+        int tamanho;
 
     public:
-    Lista(string legenda, int tamanho);
-    virtual ~Lista();
-
-    bool adicionar(Conteudo* c);
-    bool adicionar(Lista* l);
-
-    void imprimir();
-
-    Conteudo** getConteudos();
-    int getQuantidade();
-
-    int getDuracao();
+        Lista(string legenda, int tamanho);
+        virtual ~Lista();
+        bool adicionar(Conteudo* c);
+        bool adicionar(Lista* l);
+        void imprimir();
+        Conteudo** getConteudos();
+        int getQuantidade();
+        int getDuracao();
 };
 
 #endif

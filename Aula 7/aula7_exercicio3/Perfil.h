@@ -1,28 +1,27 @@
 #ifndef PERFIL_H
 #define PERFIL_H
 
-#include "Postagem.h"
 #include <string>
+#include "Postagem.h"
 
-using namespace std;
-
-class Perfil {
+class Perfil{
     private:
         string nome;
-        int maximoDePostagens;
-        Postagem **posts;
         int quantidade = 0;
+        int maximoDePostagens;
+        Postagem** postagens;
 
     public:
         Perfil(string nome, int maximoDePostagens);
         Perfil(string nome, Postagem** postagens, int quantidade);
         virtual ~Perfil();
         int getTotalDeVisualizacoes();
+        bool postar(Postagem *p);
         void imprimir();
-        bool postar(Postagem* p);
         string getNome();
         int getQuantidade();
         Postagem** getPostagens();
+        
 };
 
 #endif

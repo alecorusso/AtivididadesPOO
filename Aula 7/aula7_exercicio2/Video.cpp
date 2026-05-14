@@ -1,15 +1,10 @@
 #include "Video.h"
-#include "Conteudo.h"
-#include <string>
 #include <iostream>
-
-using namespace std;
 
 Video::Video(string legenda, int duracao) : Conteudo(legenda), duracao (duracao){}
 
 Video::~Video(){
-    cout << "Destrutor de video com " << visualizacoes << " visualizacoes: "
-         << legenda << endl;
+    cout << "Destruidor de vídeo com " << visualizacoes << " visualizacoes: " << legenda << endl;
 }
 
 int Video::getDuracao(){
@@ -17,7 +12,7 @@ int Video::getDuracao(){
 }
 
 void Video::assistir(int tempo){
-    if (tempo >= (double) duracao/2){
+    if(tempo >= (double) duracao/2){
         visualizacoes++;
     }
 }

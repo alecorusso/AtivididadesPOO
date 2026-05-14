@@ -3,19 +3,15 @@
 
 #include "Conteudo.h"
 
-using namespace std;
-
 class Video : public Conteudo {
     private:
-    int duracao;
+        int duracao;
 
-    public:
-    Video(string legenda, int duracao);
-    virtual ~Video();
-
-    int getDuracao();
-
-    void assistir(int tempo);
+    public :
+        Video(string legenda, int duracao);
+        virtual ~Video();
+        int getDuracao();
+        void assistir(int tempo);
 };
 
 #endif

@@ -8,15 +8,13 @@ using namespace std;
 class Postagem {
     protected:
         string legenda;
-        int visualizacoes = 0;
 
     public:
         Postagem(string legenda);
         virtual ~Postagem();
-        void assistir();
-        virtual void imprimir();
+        virtual void imprimir() = 0;
         string getLegenda();
-        int getVisualizacoes();
+        virtual int getVisualizacoes() = 0;
 
 };
 

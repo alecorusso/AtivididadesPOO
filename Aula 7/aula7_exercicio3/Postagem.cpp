@@ -1,10 +1,7 @@
-#include "Postagem.h"
 #include <iostream>
-#include <string>
+#include "Postagem.h"
 
-using namespace std;
-
-Postagem::Postagem(string legenda): legenda (legenda){}
+Postagem::Postagem(string legenda) : legenda(legenda){}
 
 Postagem::~Postagem(){
     cout << "Destrutor de postagem com " << visualizacoes << " visualizacoes: " << legenda << endl;
@@ -25,4 +22,3 @@ string Postagem::getLegenda(){
 int Postagem::getVisualizacoes(){
     return visualizacoes;
 }
-

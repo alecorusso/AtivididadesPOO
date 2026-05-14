@@ -17,6 +17,7 @@ class Postagem {
         virtual void imprimir();
         string getLegenda();
         int getVisualizacoes();
+
 };
 
 #endif

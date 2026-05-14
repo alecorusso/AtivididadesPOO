@@ -3,13 +3,10 @@
 
 #include "Conteudo.h"
 
-using namespace std;
-
-class Imagem : public Conteudo {
+class Imagem : public Conteudo{
     public:
-    Imagem(string legenda);
-    virtual ~Imagem();
+        Imagem(string legenda);
+        virtual ~Imagem();
 };
-
 
 #endif
